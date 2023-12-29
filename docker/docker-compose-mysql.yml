@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:8.0.32
+    container_name: mysql_c
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: kirana
+      MYSQL_USER: nikhil
+      MYSQL_PASSWORD: passwd
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+volumes:
+  dbdata:
